@@ -1,0 +1,20 @@
+backend:
+  name: github
+  branch: main
+  repo: foundriesio/docusaurus-fiotest
+publish_mode: editorial_workflow
+media_folder: "static/img"
+public_folder: "/img/"
+collections:
+  - name: ""
+    label: "Docs"
+    folder: "docs"
+    identifier_field: title
+    create: true
+    slug: "{{ slug }}"
+    extension: md
+    widget: "list"
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: body, label: Body, widget: markdown }
+      - { name: slug, label: Slug, widget: string }
